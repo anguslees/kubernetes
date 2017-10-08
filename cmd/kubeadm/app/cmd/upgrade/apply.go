@@ -176,8 +176,8 @@ func RunApply(flags *applyFlags) error {
 
 	// Use a prepuller implementation based on creating DaemonSets
 	// and block until all DaemonSets are ready; then we know for sure that all control plane images are cached locally
-	prepuller := upgrade.NewDaemonSetPrepuller(upgradeVars.client, upgradeVars.waiter, internalcfg)
-	upgrade.PrepullImagesInParallel(prepuller, flags.imagePullTimeout)
+	//prepuller := upgrade.NewDaemonSetPrepuller(upgradeVars.client, upgradeVars.waiter, internalcfg)
+	//upgrade.PrepullImagesInParallel(prepuller, flags.imagePullTimeout)
 
 	// Now; perform the upgrade procedure
 	if err := PerformControlPlaneUpgrade(flags, upgradeVars.client, upgradeVars.waiter, internalcfg); err != nil {
