@@ -34,7 +34,7 @@ import (
 
 const (
 	// selfHostingWaitTimeout describes the maximum amount of time a self-hosting wait process should wait before timing out
-	selfHostingWaitTimeout = 2 * time.Minute
+	selfHostingWaitTimeout = 20 * time.Minute
 
 	// selfHostingFailureThreshold describes how many times kubeadm will retry creating the DaemonSets
 	selfHostingFailureThreshold int = 5
